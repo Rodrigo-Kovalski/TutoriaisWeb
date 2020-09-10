@@ -16,6 +16,7 @@
 .logo{
 	width: 100px;
 	cursor: pointer;
+	z-index: 1;
 }
 .navbar{
 	width: 85%;
@@ -33,6 +34,24 @@ button{
 	border-radius: 20px;
 	outline: none;
 	cursor: pointer;
+}
+button:hover{
+	animation-name: example;
+	animation-duration: 0.3s;
+	background-color: #000729;
+}
+@keyframes example {
+	0%   {background-image: linear-gradient( to right, #00545d -50%, #000729 );}
+ 	10%  {background-image: linear-gradient( to right, #00545d -25%, #000729 );}
+	20%  {background-image: linear-gradient( to right, #00545d 0%, #000729 );}
+	30%  {background-image: linear-gradient( to right, #00545d 25%, #000729 );}
+  	40%  {background-image: linear-gradient( to right, #00545d 50%, #000729 );}
+  	50% {background-image: linear-gradient( to right, #00545d 75%, #000729 );}
+  	60%   {background-image: linear-gradient( to left, #00545d 75%, #000729 );}
+ 	70%  {background-image: linear-gradient( to left, #00545d 50%, #000729 );}
+	80%  {background-image: linear-gradient( to left, #00545d 25%, #000729 );}
+	90%  {background-image: linear-gradient( to left, #00545d 0%, #000729 );}
+  	100%  {background-image: linear-gradient( to left, #00545d -25%, #000729 );}
 }
 .content{
 	color: #fbfcfd;
@@ -133,4 +152,56 @@ h1{
 .bubbles img:nth-child(7){
 	animation-delay: 7s;
 	width: 35px;
+}
+.peixe img{
+	position: absolute;
+	top: 25px;
+	display: block;
+	height: 100vh;
+	animation-name: peixe;
+	animation-duration: 7s;
+	animation-iteration-count: infinite;
+}
+
+@keyframes peixe {
+	0%{
+		transform: translateY(-30px);
+	}
+	50%{
+		transform: translateY(30px);
+	}
+	100%{
+		transform: translateY(-30px);
+	}
+}
+
+.peixe2 img{
+	position: absolute;
+	display: block;
+	right: -70px;
+	top: 60%;
+	height: 10vh;
+	z-index: 2;
+	animation: tartaruga 15s linear infinite;
+}
+@keyframes tartaruga {
+	0%{
+		right: -70px;
+	}
+	20%{
+		top: 55%
+	}
+	40%{
+		top:60%;
+	}
+	60%{
+		top: 55%;
+	}
+	80%{
+		top: 60%;
+	}
+	100%{
+		right: 100%;
+		top: 55%;
+	}
 }
