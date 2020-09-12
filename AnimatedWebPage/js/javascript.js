@@ -21,7 +21,7 @@ botao2.onclick = function(){
 	texto2.style.opacity = '1';
 	texto2.style.transform = 'translateX(0%)';
 	botao.style.opacity = '1';
-	sidebarElement.style.opacity = '1';
+	sidebarElement.style.opacity = '0.7';
 	sidebarElement.style.position = 'fixed'
 }
 
@@ -38,4 +38,9 @@ document.querySelector("#goBeach").addEventListener('click', function(event){
 document.querySelector("#goDori").addEventListener('click', function(event){
 	event.preventDefault();
 	scrollTo("#dori");
+})
+
+document.querySelector(".beach button").addEventListener('click', function(){
+	var ativar = document.querySelector('.dolphins');
+	ativar.style.display = 'block';
 })

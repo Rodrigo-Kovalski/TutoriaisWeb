@@ -36,6 +36,9 @@ button{
 	cursor: pointer;
 	transition: 0.5s
 }
+.beach button{
+	margin: 0 0 0 auto;
+}
 small{
 	position: absolute;
 	transition: 0.3s
@@ -88,7 +91,7 @@ h1{
 	position: fixed;
 	right: 0;
 	top: 0;
-	z-index: 3;
+	z-index: 10;
 	transition: 1.2s;
 }
 .side-bar img{
@@ -339,6 +342,7 @@ h1{
 	top: 15%;
 	opacity: 1;
 	height: 13vh;
+	z-index: 5;
 	animation-delay: 9s;
 }
 .clouds img:nth-child(5){
@@ -355,4 +359,86 @@ h1{
 	100%{
 		transform: translateX(1500px);
 	}
+}
+
+.sun{
+	position: absolute;
+	width: 200px;
+	height: 200px;
+	transform: translate(15vh,15vh);
+	background: #ff5;
+	border-radius: 50%;
+	box-shadow: 0 0 0 30px #fffd77, 0 0 10px 60px #ff8;
+	animation: pulsar 5.5s linear infinite;
+}
+
+@keyframes pulsar {
+	0%{
+		background: #ff5;
+		box-shadow: 0 0 0 30px #fffd77, 0 0 10px 60px #ff8;
+	}
+	25%{
+		background: #ff8;
+		box-shadow: 0 0 0 30px  #ff5, 0 0 10px 60px #fffd77;
+	}
+	50%{
+		background: #fffd77;
+		box-shadow: 0 0 0 30px #ff8, 0 0 10px 60px #ff5;
+	}
+	75%{
+		background: #ff5;
+		box-shadow: 0 0 0 30px #fffd77, 0 0 10px 60px #ff8;
+	}
+	100%{
+		background: #ff5;
+		box-shadow: 0 0 0 30px #fffd77, 0 0 10px 60px #ff8;
+	}
+}
+
+.dolphins{
+	position: absolute;
+	bottom: 0;
+	left: -200px;
+	background: #fff;
+	z-index: 999;
+	animation: nadar 25s linear infinite;
+	display: none;
+}
+
+@keyframes nadar {
+	0%{
+		left: -400px;
+	}
+	100%{
+		left: 1500px;
+	}
+}
+
+.dolphins img{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	height: 20vh;
+	animation: pular 6s linear infinite;
+}
+
+.dolphins img:nth-child(1){
+	animation-delay: 2s;
+	left: 10px;
+}
+
+@keyframes pular {
+	0%{
+		bottom: -200px;
+		transform: rotate(-15deg);
+	}
+	50%{
+		bottom: 105px;
+		transform: rotate(5deg);
+	}
+	100%{
+		bottom: -200px;
+		transform: rotate(110deg);
+	}
+	
 }
