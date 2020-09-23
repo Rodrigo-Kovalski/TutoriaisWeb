@@ -9,6 +9,7 @@
 	height: 100vh;
 	background-image: url(../images/background.png);
 	background-size: cover;
+	background-attachment: fixed;
 	background-position: center;
 	position: relative;
 	overflow: hidden;
@@ -34,7 +35,8 @@ button{
 	border-radius: 20px;
 	outline: none;
 	cursor: pointer;
-	transition: 0.5s
+	transition: 0.5s;
+	z-index: 1000;
 }
 .beach button{
 	margin: 0 0 0 auto;
